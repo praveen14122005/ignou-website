@@ -1,0 +1,380 @@
+[debug] [2026-01-14T18:10:22.107Z] ----------------------------------------------------------------------
+[debug] [2026-01-14T18:10:22.114Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\home\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-01-14T18:10:22.115Z] CLI Version:   15.2.1
+[debug] [2026-01-14T18:10:22.115Z] Platform:      win32
+[debug] [2026-01-14T18:10:22.116Z] Node Version:  v22.15.1
+[debug] [2026-01-14T18:10:22.117Z] Time:          Wed Jan 14 2026 23:40:22 GMT+0530 (India Standard Time)
+[debug] [2026-01-14T18:10:22.117Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-14T18:10:25.586Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-14T18:10:25.587Z] > authorizing via signed-in user (avengers9209@gmail.com)
+[debug] [2026-01-14T18:10:25.588Z] [iam] checking project ignouwithus for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-01-14T18:10:25.590Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:25.590Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:25.592Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignouwithus:testIamPermissions [none]
+[debug] [2026-01-14T18:10:25.592Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignouwithus:testIamPermissions x-goog-quota-user=projects/ignouwithus
+[debug] [2026-01-14T18:10:25.592Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignouwithus:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-14T18:10:27.248Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignouwithus:testIamPermissions 200
+[debug] [2026-01-14T18:10:27.249Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignouwithus:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-14T18:10:27.250Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:27.250Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:27.251Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ignouwithus [none]
+[debug] [2026-01-14T18:10:27.884Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ignouwithus 200
+[debug] [2026-01-14T18:10:27.884Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ignouwithus {"projectId":"ignouwithus","projectNumber":"1036030882825","displayName":"IgnouWithUs ","name":"projects/ignouwithus","resources":{"hostingSite":"ignouwithus"},"state":"ACTIVE","etag":"1_93b8fab5-139d-4e9c-a8c5-f60f2c3a9b8d"}
+[debug] [2026-01-14T18:10:33.701Z] defaultcredentials: writing to file C:\Users\home\AppData\Roaming\firebase\avengers9209_gmail_com_application_default_credentials.json
+[debug] [2026-01-14T18:10:33.705Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:33.705Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:33.706Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/ignouwithus/sites pageToken=&pageSize=10
+[debug] [2026-01-14T18:10:35.537Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/ignouwithus/sites 200
+[debug] [2026-01-14T18:10:35.538Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/ignouwithus/sites {"sites":[{"name":"projects/ignouwithus/sites/ignouwithus","defaultUrl":"https://ignouwithus.web.app","appId":"1:1036030882825:web:79d48d4e1b097a7d2434d8","type":"DEFAULT_SITE"}]}
+[debug] [2026-01-14T18:10:35.538Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:35.538Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:35.539Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1036030882825:web:79d48d4e1b097a7d2434d8/config [none]
+[debug] [2026-01-14T18:10:36.486Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1036030882825:web:79d48d4e1b097a7d2434d8/config 200
+[debug] [2026-01-14T18:10:36.486Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1036030882825:web:79d48d4e1b097a7d2434d8/config {"projectId":"ignouwithus","appId":"1:1036030882825:web:79d48d4e1b097a7d2434d8","storageBucket":"ignouwithus.firebasestorage.app","apiKey":"AIzaSyAhpvaydGT5dZRvRQ-fMFeSJ1MmQyHKX2U","authDomain":"ignouwithus.firebaseapp.com","messagingSenderId":"1036030882825","measurementId":"G-VGB1J828DG","projectNumber":"1036030882825","version":"2"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2026-01-14T18:10:52.595Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:52.595Z] Checked if tokens are valid: true, expires at: 1768417696270
+[debug] [2026-01-14T18:10:52.595Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/ignouwithus/sites/ignouwithus [none]
+[debug] [2026-01-14T18:10:54.379Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/ignouwithus/sites/ignouwithus 200
+[debug] [2026-01-14T18:10:54.379Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/ignouwithus/sites/ignouwithus {"name":"projects/ignouwithus/sites/ignouwithus","defaultUrl":"https://ignouwithus.web.app","appId":"1:1036030882825:web:79d48d4e1b097a7d2434d8","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.35
+
+[info]   - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Skipping linting
+   Checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/20) ...
+
+[info] Auth error: B [Error]: Dynamic server usage: Route /api/auth/me couldn't be rendered statically because it used `request.headers`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at V (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:21778)
+    at Object.get (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:29465)
+    at l (C:\Users\home\ignou website\.next\server\app\api\auth\me\route.js:1:769)
+    at C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:38417
+    at C:\Users\home\ignou website\node_modules\next\dist\server\lib\trace\tracer.js:140:36
+    at NoopContextManager.with (C:\Users\home\ignou website\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js:25:19)
+    at ContextAPI.with (C:\Users\home\ignou website\node_modules\@opentelemetry\api\build\src\api\context.js:60:46)
+    at NoopTracer.startActiveSpan (C:\Users\home\ignou website\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js:65:31)
+    at ProxyTracer.startActiveSpan (C:\Users\home\ignou website\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js:36:24)
+    at C:\Users\home\ignou website\node_modules\next\dist\server\lib\trace\tracer.js:122:103 {
+  description: "Route /api/auth/me couldn't be rendered statically because it used `request.headers`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+
+[info]    Generating static pages (5/20) 
+
+[info]    Generating static pages (10/20) 
+
+[info] ReferenceError: window is not defined
+    at C:\Users\home\ignou website\.next\server\app\admin\upload\page.js:1:3728
+    at Array.map (<anonymous>)
+    at y (C:\Users\home\ignou website\.next\server\app\admin\upload\page.js:1:3611)
+    at nj (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nB (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+    at nD (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:66681)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64854) {
+  digest: '4246411594'
+}
+
+Error occurred prerendering page "/admin/pdfs". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at C:\Users\home\ignou website\.next\server\app\admin\upload\page.js:1:3728
+    at Array.map (<anonymous>)
+    at y (C:\Users\home\ignou website\.next\server\app\admin\upload\page.js:1:3611)
+    at nj (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nB (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+    at nD (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:66681)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64854)
+
+[info] ReferenceError: window is not defined
+    at C:\Users\home\ignou website\.next\server\app\admin\page.js:1:3662
+    at Array.map (<anonymous>)
+    at y (C:\Users\home\ignou website\.next\server\app\admin\page.js:1:3545)
+    at nj (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nB (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+    at nD (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:66681)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64854) {
+  digest: '3519928359'
+}
+
+Error occurred prerendering page "/admin". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at C:\Users\home\ignou website\.next\server\app\admin\page.js:1:3662
+    at Array.map (<anonymous>)
+    at y (C:\Users\home\ignou website\.next\server\app\admin\page.js:1:3545)
+    at nj (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nB (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+    at nD (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:66681)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64854)
+ReferenceError: window is not defined
+    at C:\Users\home\ignou website\.next\server\app\admin\login\page.js:1:3720
+    at Array.map (<anonymous>)
+    at g (C:\Users\home\ignou website\.next\server\app\admin\login\page.js:1:3603)
+    at nj (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nB (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+    at nD (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:66681)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64854) {
+  digest: '115559999'
+}
+
+Error occurred prerendering page "/admin/upload". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at C:\Users\home\ignou website\.next\server\app\admin\login\page.js:1:3720
+    at Array.map (<anonymous>)
+    at g (C:\Users\home\ignou website\.next\server\app\admin\login\page.js:1:3603)
+    at nj (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nB (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+    at nD (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:66681)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64854)
+
+[info]  ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/login". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at l (C:\Users\home\ignou website\.next\server\chunks\351.js:1:13543)
+    at c (C:\Users\home\ignou website\.next\server\chunks\351.js:1:24526)
+    at p (C:\Users\home\ignou website\.next\server\app\login\page.js:1:2290)
+    at nj (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nI (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47011)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47718)
+    at nM (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+
+Error occurred prerendering page "/login". Read more: https://nextjs.org/docs/messages/prerender-error
+
+
+[info]    Generating static pages (15/20) 
+
+[info] Scraping failed, using fallback data: eZ [Error]: self-signed certificate
+    at eZ.from (C:\Users\home\ignou website\.next\server\app\api\notifications\route.js:1:11731)
+    at m.<anonymous> (C:\Users\home\ignou website\.next\server\app\api\notifications\route.js:3:12098)
+    at m.emit (node:events:530:35)
+    at p.<computed> (C:\Users\home\ignou website\.next\server\app\api\notifications\route.js:7:195118)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:104:11)
+    at TLSSocket.socketErrorListener (node:_http_client:518:5)
+    at TLSSocket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at rY.request (C:\Users\home\ignou website\.next\server\app\api\notifications\route.js:3:24405)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ca (C:\Users\home\ignou website\.next\server\app\api\notifications\route.js:7:176766)
+    at async cA (C:\Users\home\ignou website\.next\server\app\api\notifications\route.js:7:178574)
+    at async C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:38411
+    at async e_.execute (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:27880)
+    at async e_.handle (C:\Users\home\ignou website\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:39943)
+    at async exportAppRoute (C:\Users\home\ignou website\node_modules\next\dist\export\routes\app-route.js:77:26)
+    at async exportPageImpl (C:\Users\home\ignou website\node_modules\next\dist\export\worker.js:175:20)
+    at async Span.traceAsyncFn (C:\Users\home\ignou website\node_modules\next\dist\trace\trace.js:154:20) {
+  code: 'DEPTH_ZERO_SELF_SIGNED_CERT',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function (anonymous)] ],
+    transformResponse: [ [Function (anonymous)] ],
+    timeout: 15000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://ignou.ac.in/ignou/bulletinboard/announcements/1',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function (anonymous)],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function (anonymous)],
+      socket: [Array],
+      timeout: undefined,
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/ignou/bulletinboard/announcements/1',
+      method: 'GET',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: rn],
+      beforeRedirects: [Object],
+      http2Options: undefined,
+      hostname: 'ignou.ac.in',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/ignou/bulletinboard/announcements/1'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /ignou/bulletinboard/announcements/1 HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: ignou.ac.in\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/ignou/bulletinboard/announcements/1',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ignou.ac.in',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://ignou.ac.in/ignou/bulletinboard/announcements/1',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  [cause]: Error: self-signed certificate
+      at TLSSocket.onConnectSecure (node:_tls_wrap:1679:34)
+      at TLSSocket.emit (node:events:518:28)
+      at TLSSocket._finishInit (node:_tls_wrap:1078:8)
+      at ssl.onhandshakedone (node:_tls_wrap:864:12)
+      at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+    code: 'DEPTH_ZERO_SELF_SIGNED_CERT'
+  }
+}
+
+[info] No notices found, using fallback data
+
+[info]  ✓ Generating static pages (20/20)
+
+[info] 
+
+[info] > Export encountered errors on following paths:
+	/admin/page: /admin
+	/admin/pdfs/page: /admin/pdfs
+	/admin/upload/page: /admin/upload
+	/login/page: /login
+
+[debug] [2026-01-14T18:11:39.780Z] Error: ENOENT: no such file or directory, open 'C:\Users\home\ignou website\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

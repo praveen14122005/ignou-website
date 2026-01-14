@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1768406572506cjvczpy7i",
+    "email": "admin@ignouwithus.com",
+    "name": "Admin User",
+    "password": "$2a$10$9E7bql0PNo5RPsPzUPpvoOLpeMuF1.yDWs3rhB9n5CXTSpBToFx1e",
+    "role": "admin",
+    "createdAt": "2026-01-14T16:02:52.506Z",
+    "purchasedPDFs": []
+  }
+]
