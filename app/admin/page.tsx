@@ -22,29 +22,54 @@ export default function AdminDashboard() {
     
     const token = localStorage.getItem('token');
     if (!token) {
+      console.log('No token found, redirecting to login');
       router.push('/admin/login');
       return;
     }
 
-    fetch('/api/auth/me', {
-      headers: {
-        'Authorization': `Bearer ${token}`,
-      },
-    })
-      .then(res => res.json())
-      .then(data => {
+    const checkAuth = async () => {
+      // Safety timeout to prevent infinite spinner
+      const timeoutId = setTimeout(() => {
+        if (loading) {
+          console.warn('Admin auth check timed out');
+          setLoading(false);
+        }
+      }, 10000);
+
+      try {
+        const res = await fetch('/api/auth/me', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+        
+        if (!res.ok) {
+          throw new Error('Auth check failed');
+        }
+
+        const data = await res.json();
+        
         if (data.error || data.role !== 'admin') {
+          console.log('User is not admin, redirecting');
           router.push('/admin/login');
         } else {
           setUser(data);
-          loadAnalytics(token);
+          // Load analytics separately and don't block the main UI if it fails
+          loadAnalytics(token).finally(() => {
+            setLoading(false);
+            clearTimeout(timeoutId);
+          });
         }
-      })
-      .catch(() => {
+      } catch (error) {
+        console.error('Admin auth error:', error);
         router.push('/admin/login');
-      })
-      .finally(() => setLoading(false));
-  }, [router]);
+        setLoading(false);
+        clearTimeout(timeoutId);
+      }
+    };
+
+    checkAuth();
+  }, [router, mounted]);
 
   const loadAnalytics = async (token: string) => {
     try {
