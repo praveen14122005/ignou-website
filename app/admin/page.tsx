@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -10,8 +11,15 @@ export default function AdminDashboard() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [analytics, setAnalytics] = useState<any>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    
     const token = localStorage.getItem('token');
     if (!token) {
       router.push('/admin/login');
@@ -52,7 +60,7 @@ export default function AdminDashboard() {
     }
   };
 
-  if (loading) {
+  if (!mounted || loading) {
     return (
       <div className="container mx-auto px-4 py-12 text-center">
         <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
@@ -107,7 +115,9 @@ export default function AdminDashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-500 text-sm font-medium">Total Revenue</p>
-                <p className="text-3xl font-bold text-gray-800 mt-1">₹{analytics.totalRevenue.toFixed(2)}</p>
+                <p className="text-3xl font-bold text-gray-800 mt-1">
+                  ₹{(Number(analytics.totalRevenue) || 0).toFixed(2)}
+                </p>
               </div>
               <div className="bg-yellow-50 p-3 rounded-lg">
                 <DollarSign className="w-8 h-8 text-yellow-600" />
