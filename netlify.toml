@@ -3,7 +3,7 @@
   publish = ".next"
 
 [build.environment]
-  SECRETS_SCAN_OMIT_KEYS = "ADMIN_NAME,ADMIN_EMAIL,ADMIN_PASSWORD"
+  SECRETS_SCAN_OMIT_KEYS = "ADMIN_NAME,ADMIN_EMAIL,ADMIN_PASSWORD,JWT_SECRET"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

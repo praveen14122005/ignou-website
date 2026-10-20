@@ -35,7 +35,7 @@ npm install
 
 2. **Create a `.env.local` file:**
 ```
-JWT_SECRET=your-secret-key-change-in-production-use-a-long-random-string
+JWT_SECRET=your-very-long-random-secret-key-here
 ADMIN_EMAIL=admin@ignouwithus.com
 ADMIN_PASSWORD=your-secure-password-here
 ADMIN_NAME=Admin User
