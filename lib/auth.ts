@@ -37,6 +37,26 @@ export function verifyToken(token: string): JWTPayload | null {
 }
 
 export async function authenticateUser(email: string, password: string): Promise<User | null> {
+  // Check for environment-based admin first to avoid exposing secrets in JSON files
+  const envAdminEmail = process.env.ADMIN_EMAIL;
+  const envAdminPassword = process.env.ADMIN_PASSWORD;
+  const envAdminName = process.env.ADMIN_NAME || 'Admin User';
+
+  if (envAdminEmail && email === envAdminEmail) {
+    const isValid = envAdminPassword ? (password === envAdminPassword) : false;
+    if (isValid) {
+      return {
+        id: 'admin-env',
+        email: envAdminEmail,
+        name: envAdminName,
+        password: '', // Don't return the real password
+        role: 'admin',
+        createdAt: new Date().toISOString(),
+        purchasedPDFs: [],
+      };
+    }
+  }
+
   const user = getUserByEmail(email);
   if (!user) return null;
   
