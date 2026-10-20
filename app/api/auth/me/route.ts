@@ -24,6 +24,23 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    // Special handling for environment-based admin
+    if (payload.userId === 'admin-env') {
+      const envAdminEmail = process.env.ADMIN_EMAIL;
+      const envAdminName = process.env.ADMIN_NAME || 'Admin User';
+      
+      if (envAdminEmail && payload.email === envAdminEmail) {
+        return NextResponse.json({
+          id: 'admin-env',
+          email: envAdminEmail,
+          name: envAdminName,
+          role: 'admin',
+          createdAt: new Date().toISOString(),
+          purchasedPDFs: [],
+        });
+      }
+    }
+
     const user = getUserById(payload.userId);
     if (!user) {
       return NextResponse.json(
